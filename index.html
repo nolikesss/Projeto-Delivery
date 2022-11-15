@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover">
+    <title>Ximburguer</title>
+    <link rel="stylesheet" href="/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+    <!-- desktop view -->
+    <div class="container" id="container">
+        <div id="menu">
+            <div class="title">
+                <P>Ximburguer</P>
+                <img src="./img/como-montar-um-sistema-para-hamburgueria-delivery.png" style="height: 150px;" alt="">
+            </div>
+            <div class="menu-item">
+                <a href="#">Serviços</a>
+                <a href="#">Carrinho</a>
+                <a href="#">Contato</a>
+                <a href="#">Confira</a>
+            </div>
+        </div>
+
+        <div id="food-container">
+            <div id="header">
+                <div class="add-box">
+                    <i class="fa fa-map-marker your-address" id="add-address"> Seu endereço</i>
+                </div>
+                <div class="util">
+                    <i class="fa fa-search"> Busca</i>
+                    <i class="fa fa-cart-plus" id="cart-plus"> 0 Items</i>
+                </div>
+            </div>
+            <div id="food-items" class="d-food-items">
+                <div id="biryani" class="d-biryani">
+                    <p id="category-name">Ximburguers</p>
+                </div>
+
+
+                <div id="bebida" class="d-paneer">
+                    <p id="category-name">Bebidas</p>
+                </div>
+
+            </div>
+
+            <div id="cart-page" class="cart-toggle">
+                <p id="cart-title">Carrinho</p>
+                <p id="m-total-amount">Total Amout : 100</p>
+                <table>
+                    <thead>
+                        <td>Item</td>
+                        <td>Nome</td>
+                        <td>Quantidade</td>
+                        <td>Preço</td>
+                    </thead>
+                    <tbody id="table-body">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div id="cart">
+            <div class="taste-header">
+                <div class="user">
+                    <i class="fa fa-user-circle" id="circle"> Account</i>
+
+                </div>
+            </div>
+            <div id="category-list">
+                <p class="item-menu">Opções</p>
+                <div class="border"></div>
+            </div>
+            <div id="checkout" class="cart-toggle">
+                <p id="total-item">Total Item : 5</p>
+                <p id="total-price"></p>
+                <p id="delievery">Entrega gratis acima de R$ 40,00</p>
+                <button class="cart-btn">Pagar</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="mobile-view" class="mobile-view">
+        <div class="mobile-top">
+            <div class="logo-box">
+                <P>Ximburguer</P>
+                <i class="fa fa-map-marker your-address" id="m-add-address"> Informe endereço!</i>
+            </div>
+            <div class="top-menu">
+                <i class="fa fa-search"></i>
+                <i class="fa fa-tag"></i>
+                <i class="fa fa-heart-o"></i>
+                <i class="fa fa-cart-plus" id="m-cart-plus">0</i>
+            </div>
+        </div>
+
+        <div class="item-container">
+            <div class="category-header" id="category-header">
+            </div>
+
+   
+
+        
+    <script src="/index.js" type="module"></script>
+</body>
+
+</html>
