@@ -11,21 +11,15 @@ body{
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
     height: 100%;
-    
+    background-color: white;
+    background-image: url();
 }
 .container{
     display: grid;
     grid-template-columns: 250px 1fr 300px;
-    min-height: 80vh;
-    min-height: -webkit-fill-available;
-    overflow: hidden;
+    min-height: 100vh;
 }
-#menu{
-    background: rgb(109, 50, 50);
-}
-
  
-
 #menu img{
     width: 150px;
     height: 150px;
@@ -50,25 +44,15 @@ body{
     margin: 3px 0;
     margin-bottom: 30px;
     border-radius: 2px;
-    background: rgb(194, 190, 189);
+    background: white
 }
 
-.menu-item a{
-    display: block;
-    text-decoration: none;
-    font-size: 20px;
-    padding: 8px 30px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    margin: 12px 0;
-    color: rgb(128, 129, 129);
-    font-weight: 300;
-    
-}
+
 .menu-item a:hover{
-    background: rgb(250, 212, 218);
+    background: rgb(168, 2, 27);
 }
 #food-items{
-    background: whitesmoke;
+    background: white;
     overflow: auto;
     height: calc(100vh - 86px);
 }
@@ -80,7 +64,7 @@ body{
     padding-bottom: 10px;
     position: sticky;
     top: 0;
-    background: whitesmoke;
+    background: white;
     z-index: 1;
 }
 ::-webkit-scrollbar{
@@ -140,7 +124,7 @@ body{
 
 
  #item-card #item-card{
-    background: rgb(221, 243, 243);
+    background: rgb(60, 139, 139);
 }
 #category-name,.item-menu{
     margin: 10px;
@@ -177,7 +161,7 @@ body{
 .fa-heart-o{
     padding: 6px;
     border-radius: 50%;
-    background: white;
+    background: rgb(248, 245, 245);
     cursor: pointer;
 }
 .toggle-heart{
@@ -247,9 +231,10 @@ color: white;
     bottom: 30px;
     margin: 15px 0;
     cursor: pointer;
+    transition: 0.1s ease-in;
 }
 #cart-page table tbody td{
-    padding: 10px 0;
+    padding: 3px 0;
     font-size: 20px;
 }
 #cart-page table tbody button{
@@ -281,14 +266,16 @@ color: white;
 }
 #total-price,#total-item{
     font-size: 25px;
-    color: indianred;
+    color: rgb(221, 17, 17);
+    font-weight: bold;
 }
 #delievery{
     font-size: 20px;
+    font-weight: bold;
     color: limegreen;
 }
 #cart{
-    background: whitesmoke;
+    background: white;
     padding-right: 30px;
     overflow-y: scroll;
 }
@@ -298,7 +285,7 @@ color: white;
     font-size: 30px;
     margin-top: 40px;
     color: indianred;
-    background: whitesmoke;
+    background: white;
     
 }
 .list-card{
@@ -314,7 +301,7 @@ color: white;
 }
 .list-card:hover img{
     transition: 0.5s all ease-in-out;
-    transform: scale(1.2);
+    transform: scale(1.5);
 }
 .list-card img{
     width: 50px;
@@ -322,7 +309,7 @@ color: white;
     border-radius: 50%;
 }
 .list-name{
-    font-size: 20px;
+    font-size: 200px;
     margin: 0 10px;
     text-decoration: none;
     text-transform: capitalize;
@@ -333,198 +320,15 @@ color: white;
     padding-bottom: 10px;
     position: sticky;
     top: 0;
-    background: whitesmoke;
+    background: white;
 }
 #mobile-view{
     display: none;
 }
-#biryani{
+#burger{
     margin-top: 10px;
 }
 #m-total-amount{
     display: none;
 }
 
-@media screen and (max-width : 800px) and (-webkit-min-device-pixel-ratio: 2){
-    .container{
-        display: none;
-    }
-    #mobile-view{
-        display: grid;
-        grid-template-rows: 120px 1fr 50px;
-        height: 100%;
-        overflow: hidden;
-        
-        width: 100vw;
-    }
-    .mobile-top{
-        padding: 5px 15px;
-        background: white;
-        z-index: 1;
-    }
-    .item-container{
-        overflow-y: scroll;
-    }
-    .logo-box,.top-menu{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-  
-    .logo-box p{
-        color: red;
-        font-size: 25px;
-        font-weight: 600;
-    }
-    .logo-box .your-address{
-        font-size: 18px;
-        width: 150px;
-        color: crimson;
-        text-transform: capitalize;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-    .top-menu{
-
-        color: indianred;
-    }
-    .top-menu i{
-        font-size: 20px;
-        cursor: pointer;
-        padding: 12px 5px ;
-        border-radius: 50%;
-    }
-    
-    .m-cart-toggle{
-        color: white;
-        background: lightcoral;
-    }
-    .category-header{
-        display: flex;
-        width: 100vw;
-        overflow-x: scroll;
-        position: sticky;
-        top: 0;
-        background: white;
-        z-index: 1;
-        border-bottom: 1px solid rgb(219, 219, 219);
-        margin: 0;
-        transform: translateZ(0);
-        -webkit-transform: translateZ(0);
-    }
-    .toggle-category{
-        display: none;
-        position: relative;
-    }
-    .list-card{
-        margin: 0 10px;
-        text-align: center;
-    }
-    .list-card img{
-        width: 60px;
-        height: 60px;
-        border-radius: 50%;
-    }
-    .list-card:hover{
-        background: none;
-    }
-    .list-card:hover img{
-        transform: none;
-        transition: none;
-    }
-    .list-name{
-        margin: 5px 0;
-        color: coral;
-        width: max-content;
-        font-size: 16px;
-    }
-    #food-items{        
-        padding: 5px 10px;
-    }
-
-    .mobile-footer{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 5px 15px;
-        background: white;
-        border-top: 1px solid rgb(219, 219, 219);
-    }
-    .mobile-footer{
-        color: indianred;
-        text-transform: uppercase;
-        font-size: 16px;
-        position: static;
-    }
-    #category-name{
-        font-size: 25px;
-        font-family: 'Aclonica', sans-serif;
-    }
-    #item-card{
-        width: 150px;
-        height: 200px;
-    }
-    #item-card img{
-        width: 100px;
-        height: 100px;
-    }
-    #item-name,#item-price{
-        font-size: 16px;
-    }
-    .list-card{
-        flex-direction: column;
-    }
-    #cart-page{
-        margin: 3px 0;
-        padding: 10px 5px;
-        padding-bottom: 30px;
-        border-top: 1px solid rgb(219, 219, 219);
-    }
-    #cart-page table thead td{
-        font-size: 20px;
-    }
-    #cart-page table tbody td{
-        font-size: 18px;
-    }
-    #cart-page table tbody img{
-        width: 60px;
-        height: 60px;
-    }
-    #cart-title{
-        font-size: 25px;
-        display: inline-block;
-        font-family: 'Aclonica', sans-serif;
-    }
-    #m-total-amount{
-        display: inline-block;
-        color: lightcoral;
-        padding: 5px 10px;
-        margin: 0;
-        border:  1px solid lightcoral;
-        float: right;
-    }
-    .cart-btn{
-        font-size: 14px;
-        background: lightcoral;
-        padding: 8px 15px;
-        margin: auto;
-    }
-    .btn-box{
-        text-align: center;
-    }
-    
-}
-
-@media screen and (max-width : 400px) and (-webkit-min-device-pixel-ratio: 2){
-    #mobile-view{
-        min-height: -webkit-fill-available;
-    }
-    #item-card{
-        height: 200px;
-        width: 140px;
-    }
-    #food-items{
-        padding: 0;
-    }
-}

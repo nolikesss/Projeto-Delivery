@@ -1,15 +1,16 @@
 import {foodItem} from './fooditem.js'
 
 function displayItems(){
-    var biryani= document.getElementById('biryani');
-    var paneer=  document.getElementById('bebida');;
+    var burger= document.getElementById('burger');
+    var bebida=  document.getElementById('bebida');;
   
 
     
 
-    const biryaniData= foodItem.filter((item)=>item.category=='ximburguers');
-    const PaneerData= foodItem.filter((item)=>item.category=='Bebida');
-    biryaniData.map(item=>{
+    const burgerData= foodItem.filter((item)=>item.category=='ximburguers');
+    const bebidaData= foodItem.filter((item)=>item.category=='Bebida');
+
+    burgerData.map(item=>{
         
         var itemCard= document.createElement('div');
         itemCard.setAttribute('id','item-card')
@@ -18,9 +19,9 @@ function displayItems(){
         cardTop.setAttribute('id','card-top');
 
         var star= document.createElement('i');
-        star.setAttribute('class','fa fa-star');
-        star.setAttribute('id','rating');
-        star.innerText= ' ' + item.rating;
+        
+        
+        
 
         var heart= document.createElement('i');
         heart.setAttribute('class','fa fa-heart-o add-to-cart');
@@ -39,21 +40,21 @@ function displayItems(){
 
         var itemPrice= document.createElement('p');
         itemPrice.setAttribute('id','item-price');
-        itemPrice.innerText= 'Preço : $ ' + item.price;
+        itemPrice.innerText= 'Preço : R$ ' + item.price;
 
         itemCard.appendChild(cardTop);
         itemCard.appendChild(img);
         itemCard.appendChild(itemName);
         itemCard.appendChild(itemPrice);
 
-        biryani.appendChild(itemCard);
+        burger.appendChild(itemCard);
         
     })
 
 
     
 
-    PaneerData.map(item=>{
+    bebidaData.map(item=>{
         var itemCard= document.createElement('div');
         itemCard.setAttribute('id','item-card')
 
@@ -61,9 +62,7 @@ function displayItems(){
         cardTop.setAttribute('id','card-top');
 
         var star= document.createElement('i');
-        star.setAttribute('class','fa fa-star');
-        star.setAttribute('id','rating');
-        star.innerText= ' ' + item.rating;
+       
 
         var heart= document.createElement('i');
         heart.setAttribute('class','fa fa-heart-o add-to-cart');
@@ -82,14 +81,14 @@ function displayItems(){
 
         var itemPrice= document.createElement('p');
         itemPrice.setAttribute('id','item-price');
-        itemPrice.innerText= 'Preço : $ ' + item.price;
+        itemPrice.innerText= 'Preço : R$ ' + item.price;
 
         itemCard.appendChild(cardTop);
         itemCard.appendChild(img);
         itemCard.appendChild(itemName);
         itemCard.appendChild(itemPrice);
         
-        paneer.appendChild(itemCard)
+        bebida.appendChild(itemCard)
 
     })
 
@@ -104,31 +103,6 @@ displayItems();
 const vegData= [...new Map(foodItem.map(item=> [item['category'],item])).values()];
 console.log(vegData);
 
-function selectTaste(){
-    var categoryList= document.getElementById('category-list');
-
-    vegData.map(item=>{
-        console.log(item)
-        var listCard= document.createElement('div');
-        listCard.setAttribute('class','list-card');
-    
-        var listImg= document.createElement('img');
-        listImg.src= item.img;
-    
-        var listName= document.createElement('a');
-        listName.setAttribute('class','list-name');
-        listName.innerText= item.category;
-        listName.setAttribute('href','#'+item.category)
-    
-        listCard.appendChild(listImg);
-        listCard.appendChild(listName);
-
-        var cloneListCard= listCard.cloneNode(true);
-        categoryList.appendChild(listCard);
-        document.querySelector('.category-header').appendChild(cloneListCard)
-    })
-}
-selectTaste();
 
 
 document.querySelectorAll('.add-to-cart').forEach(item=>{
@@ -286,7 +260,7 @@ function cartToggle(){
 window.onresize= window.onload= function(){
     var size= window.screen.width;
     console.log(size)
-    if(size<800){
+    if(size<600){
         var cloneFoodItems= document.getElementById('food-items').cloneNode(true);
         var cloneCartPage= document.getElementById('cart-page').cloneNode(true);
         document.getElementById('food-items').remove();
@@ -295,7 +269,7 @@ window.onresize= window.onload= function(){
         document.getElementById('food-items').after(cloneCartPage);
         addEvents()
     }
-    if(size>800){
+    if(size>600){
         var cloneFoodItems= document.getElementById('food-items').cloneNode(true);
         document.getElementById('food-items').remove();
         document.getElementById('header').after(cloneFoodItems);
@@ -333,3 +307,18 @@ function addAddress(){
         alert("Address not added")
     }
 }
+
+
+
+
+document.getElementById('botao-pagar').addEventListener('click',Pagar);
+
+function Pagar(){
+    alert('Solicitado sksdfjaksjdaksjdkas')
+}
+
+
+
+
+
+   
