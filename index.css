@@ -16,7 +16,7 @@ body{
 .container{
     display: grid;
     grid-template-columns: 250px 1fr 300px;
-    min-height: 80vh;
+    min-height: 100vh;
     min-height: -webkit-fill-available;
     overflow: hidden;
 }
@@ -39,10 +39,6 @@ body{
     margin: 0 2px 3px;
     font-weight: bold;
     padding-bottom: 100px;
-}
-
-.title img{
-    margin-left: 10px;
 }
 .border{
     width: 80px;
@@ -124,29 +120,38 @@ body{
 .cart-toggle{
     display: block;
 }
+.mesa-item {
+    font-size: 18px;
+    margin: 0 16px;
+    border: 1px solid crimson;
+    padding: 8px 16px;
+    color: crimson;
+    cursor: pointer;
+}
 .util i,.user i{
     font-size: 18px;
     margin: 0 16px;
     border: 1px solid crimson;
     padding: 8px 16px;
     color: crimson;
-    border-radius: 20px;
     cursor: pointer;
 }
-.util i:active{
-    color: white;
-    background: crimson;
-}
-
-
  #item-card #item-card{
     background: rgb(221, 243, 243);
+}
+#fonte-cardapio{
+    margin: 10px;
+    font-size: 50px;   
+    color: black;
+    font-family: 'Lucida Handwriting';
+    font-weight: bold;
 }
 #category-name,.item-menu{
     margin: 10px;
     font-size: 35px;   
     color: coral;
-    font-family: 'Aclonica', sans-serif;
+    font-family: 'Copperplate';
+    font-weight: bold;
 }
 #item-card{
     width: 180px;
@@ -174,15 +179,18 @@ body{
     font-size: 14px;
     border-radius: 15px;
 }
-.fa-heart-o{
+.fa-plus{
     padding: 6px;
     border-radius: 50%;
     background: white;
     cursor: pointer;
 }
-.toggle-heart{
-background: orangered;
-color: white; 
+.fa-minus{
+    padding: 6px;
+    border-radius: 50%;
+    cursor: pointer;
+    background: orangered;
+    color: white; 
 }
 #item-card img{
     width: 120px;
@@ -338,7 +346,7 @@ color: white;
 #mobile-view{
     display: none;
 }
-#biryani{
+#burger{
     margin-top: 10px;
 }
 #m-total-amount{
