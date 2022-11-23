@@ -1,4 +1,4 @@
-import {foodItem} from './fooditem.js'
+import {cardapio} from './cardapio.js'
 
 function displayItems(){
     var burger= document.getElementById('burger');
@@ -7,27 +7,20 @@ function displayItems(){
 
     
 
-    const burgerData= foodItem.filter((item)=>item.category=='ximburguers');
-    const bebidaData= foodItem.filter((item)=>item.category=='Bebida');
-
+    const burgerData= cardapio.filter((item)=>item.category=='ximburguers');
+    const bebidaData= cardapio.filter((item)=>item.category=='bebida');
     burgerData.map(item=>{
         
         var itemCard= document.createElement('div');
         itemCard.setAttribute('id','item-card')
 
         var cardTop= document.createElement('div');
-        cardTop.setAttribute('id','card-top');
-
-        var star= document.createElement('i');
-        
-        
-        
+        cardTop.setAttribute('id','card-top');        
 
         var heart= document.createElement('i');
-        heart.setAttribute('class','fa fa-heart-o add-to-cart');
+        heart.setAttribute('class','fa fa-plus add-to-cart');
         heart.setAttribute('id',item.id)
 
-        cardTop.appendChild(star);
         cardTop.appendChild(heart);
 
 
@@ -59,16 +52,12 @@ function displayItems(){
         itemCard.setAttribute('id','item-card')
 
         var cardTop= document.createElement('div');
-        cardTop.setAttribute('id','card-top');
-
-        var star= document.createElement('i');
-       
+        cardTop.setAttribute('id','card-top');       
 
         var heart= document.createElement('i');
-        heart.setAttribute('class','fa fa-heart-o add-to-cart');
+        heart.setAttribute('class','fa fa-plus add-to-cart');
         heart.setAttribute('id',item.id)
 
-        cardTop.appendChild(star);
         cardTop.appendChild(heart);
 
 
@@ -100,7 +89,7 @@ function displayItems(){
 displayItems();
 
 
-const vegData= [...new Map(foodItem.map(item=> [item['category'],item])).values()];
+const vegData= [...new Map(cardapio.map(item=> [item['category'],item])).values()];
 console.log(vegData);
 
 
@@ -113,19 +102,17 @@ var cartData= [];
 function addToCart(){
     
     var itemToAdd= this.parentNode.nextSibling.nextSibling.innerText;
-    var itemObj= foodItem.find(element=>element.name==itemToAdd);
+    var itemObj= cardapio.find(element=>element.name==itemToAdd);
 
     var index= cartData.indexOf(itemObj);
     if(index=== -1){
-        document.getElementById(itemObj.id).classList.add('toggle-heart');
+        document.getElementById(itemObj.id).classList.add('toogle-plus');
         cartData= [...cartData,itemObj];
+        alert("Adicionado ao carrinho!");
     }
     else if(index > -1){
-        alert("Added to cart!");
+        alert("Item já adicionado ao carrinho!");
     }
-    
-    document.getElementById('cart-plus').innerText=
-    ' ' + cartData.length + ' Items';
     document.getElementById('m-cart-plus').innerText=
     ' ' + cartData.length;
     totalAmount();
@@ -205,7 +192,7 @@ function decrementItem(){
         decObj.price= currPrice*decObj.quantity;
     }
     else{
-        document.getElementById(decObj.id).classList.remove('toggle-heart')
+        document.getElementById(decObj.id).classList.remove('toogle-plus')
         cartData.splice(ind,1);
         document.getElementById('cart-plus').innerText= ' ' + cartData.length + ' Items';
         document.getElementById('m-cart-plus').innerText= ' ' + cartData.length;
@@ -217,7 +204,7 @@ function decrementItem(){
             document.getElementById('category-header').classList.toggle('toggle-category');
             document.getElementById('checkout').classList.toggle('cart-toggle');
             flag= false;
-            alert("nenhum item no carrinho!");
+            alert("Nenhum item no carrinho!");
             console.log(flag)
         }
     }
@@ -230,9 +217,8 @@ function totalAmount(){
     cartData.map(item=>{
         sum+= item.price;
     })
-    document.getElementById('total-item').innerText= '  Itens : ' + cartData.length;
-    document.getElementById('total-price').innerText= 'Preço : R$ ' + sum;
-    document.getElementById('m-total-amount').innerText= 'Preço : R$ ' + sum;
+    document.getElementById('total-item').innerText= 'Itens: ' + cartData.length;
+    document.getElementById('total-price').innerText= 'Total : R$ ' + sum;
 }
 
 document.getElementById('cart-plus').addEventListener('click',cartToggle);
@@ -251,7 +237,7 @@ function cartToggle(){
         console.log(flag)
     }
     else{
-        alert("nenhum item no carrinho!");
+        alert("Nenhum item no carrinho!");
     }
 }
 
@@ -299,12 +285,12 @@ document.getElementById('add-address').addEventListener('click',addAddress);
 document.getElementById('m-add-address').addEventListener('click',addAddress);
 
 function addAddress(){
-    var address= prompt('Entre com seu endereço','');
+    var address= prompt('Digite seu endereço:','');
     if(address){
         document.getElementById('add-address').innerText= ' ' + address;
     }
     else{
-        alert("Address not added")
+        alert("Endereço vazio!")
     }
 }
 
