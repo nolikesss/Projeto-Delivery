@@ -280,25 +280,16 @@ function addEvents(){
     })
 }
 
-document.getElementById('add-address').addEventListener('click',addAddress);
 
-document.getElementById('m-add-address').addEventListener('click',addAddress);
 
-function addAddress(){
-    var address= prompt('Digite seu endereço:','');
-    if(address){
-        document.getElementById('add-address').innerText= ' ' + address;
-    }
-    else{
-        alert("Endereço vazio!")
-    }
-}
-
-document.getElementById('botao-pagar').addEventListener('click',Pagar);
 
 function Pagar(){
-    alert('Solicitado sksdfjaksjdaksjdkas')
+    alert('Pedido solicitado com sucesso!!')
+    location.reload()
 }
+document.getElementById('botao-pagar').addEventListener('click',Pagar);
+
+console.log(Pagar)
 
 
 
