@@ -33,7 +33,7 @@ function displayItems(){
 
         var itemPrice= document.createElement('p');
         itemPrice.setAttribute('id','item-price');
-        itemPrice.innerText= 'Preço : R$ ' + item.price;
+        itemPrice.innerText= 'R$ ' + item.price;
 
         itemCard.appendChild(cardTop);
         itemCard.appendChild(img);
@@ -70,7 +70,7 @@ function displayItems(){
 
         var itemPrice= document.createElement('p');
         itemPrice.setAttribute('id','item-price');
-        itemPrice.innerText= 'Preço : R$ ' + item.price;
+        itemPrice.innerText= 'R$ ' + item.price;
 
         itemCard.appendChild(cardTop);
         itemCard.appendChild(img);
@@ -204,7 +204,7 @@ function decrementItem(){
             document.getElementById('category-header').classList.toggle('toggle-category');
             document.getElementById('checkout').classList.toggle('cart-toggle');
             flag= false;
-            alert("Nenhum item no carrinho!");
+            alert("Não há nada no carrinho!");
             console.log(flag)
         }
     }
@@ -218,7 +218,7 @@ function totalAmount(){
         sum+= item.price;
     })
     document.getElementById('total-item').innerText= 'Itens: ' + cartData.length;
-    document.getElementById('total-price').innerText= 'Total : R$ ' + sum;
+    document.getElementById('total-price').innerText= 'Total: R$ ' + sum;
 }
 
 document.getElementById('cart-plus').addEventListener('click',cartToggle);
@@ -293,9 +293,6 @@ function addAddress(){
         alert("Endereço vazio!")
     }
 }
-
-
-
 
 document.getElementById('botao-pagar').addEventListener('click',Pagar);
 

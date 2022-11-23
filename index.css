@@ -116,12 +116,13 @@ body{
     cursor: pointer;
 }
 .util i,.user i{
-    font-size: 18px;
+    font-size:25px;
     margin: 0 16px;
     border: 1px solid crimson;
     padding: 8px 16px;
     color: crimson;
     cursor: pointer;
+    font-weight: bold;
 }
  #item-card #item-card{
     background: rgb(221, 243, 243);
@@ -134,10 +135,9 @@ body{
     font-weight: bold;
 }
 #category-name,.item-menu{
-    margin: 10px;
-    font-size: 35px;   
-    color: coral;
-    font-family: 'Copperplate';
+    font-size: 35px;
+    margin: 10;
+    color: indianred;
     font-weight: bold;
 }
 #item-card{
@@ -269,7 +269,7 @@ body{
     margin: 40px auto;
     border-radius: 5px;
     background: white;
-    padding: 10px 20px;
+    padding: 160px 30px;
 }
 #checkout p{
     margin: 15px 0;
