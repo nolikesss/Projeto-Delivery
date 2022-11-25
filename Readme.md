@@ -1,4 +1,4 @@
-# Projeto Ximburger
+# Projeto Sistema de Pedidos Online | Restaurante Ximburger
 
 O objetivo do nosso projeto é criar um sistema totalmente online de solicitação de pedidos para o restaurante ficticio Ximburger.
 
@@ -8,7 +8,8 @@ Portanto, criamos esse sistema que possui o cardápio do restaurante e por lá �
 
 A proposta é que o sistema seja simples e de fácil compreensão, para que não haja duvidas no momento de fazer o uso do mesmo.
 
-Abaixo alguns prints do sistema:
+
+Veja abaixo alguns prints do sistema:
 
 Tela inicial, onde há o cardápio para selecionar o que irá pedir:
 
