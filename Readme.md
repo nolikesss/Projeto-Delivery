@@ -1,10 +1,19 @@
-# Projeto-Delivery
-Projeto-Delivery-responsive
+# Projeto Ximburger
 
-![image](https://user-images.githubusercontent.com/101597768/202033989-7c15d53d-9791-4da7-b82d-117e7d4237ed.png)
+O objetivo do nosso projeto é criar um sistema totalmente online de solicitação de pedidos para o restaurante ficticio Ximburger.
 
-![image](https://user-images.githubusercontent.com/101597768/202034074-e3c492b0-40d6-491c-a25a-6a9d2a3bc298.png)
+Muitas vezes quando vamos à um restaurante, nos deparamos com a situação de ter o desejo de realizar um pedido e as vezes não conseguimos fazer no exato momento que gostariamos por que as pessoas responsáveis por coletar o que desejamos pedir estão ocupadas, principalmente quando o restaurante está cheio.
 
-![image](https://user-images.githubusercontent.com/101597768/202034157-e6a2039a-2096-4cd4-8931-85d1d93477d1.png)
+Portanto, criamos esse sistema que possui o cardápio do restaurante e por lá é possível fazer o pedido completo, sem que haja necessidade de chamar alguém para anotar. A idéia é que em cada mesa tenha um QRCode que irá levar ao sistema de solicitação de pedidos. Cada mesa terá o seu QRCode individual, ou seja, se você está na mesa 10, o QRCode de sua mesa irá levar ao site para solicitação de pedidos APENAS para a mesa 10.
 
-![image](https://user-images.githubusercontent.com/101597768/202034406-4af44186-6fc4-48e1-aec5-3a46e7cf4060.png)
+A proposta é que o sistema seja simples e de fácil compreensão, para que não haja duvidas no momento de fazer o uso do mesmo.
+
+Abaixo alguns prints do sistema:
+
+Tela inicial, onde há o cardápio para selecionar o que irá pedir:
+
+![image](https://user-images.githubusercontent.com/101597768/203636278-6339a671-5ed2-47cc-b866-258e98dabaf0.png)
+
+Tela do carrinho, para aumentar ou diminuir a quantia de itens que deseja e finalizar o pedido:
+
+![image](https://user-images.githubusercontent.com/101597768/203636440-1f750720-04c6-4871-a323-17abf7d4fb2f.png)
